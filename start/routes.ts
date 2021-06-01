@@ -25,3 +25,5 @@ Route.get('/', async () => {
 })
 
 Route.resource('/cliente', 'ClientesController.ts').apiOnly()
+Route.post('/cliente', 'ClientesController.store')
+Route.get('/cliente', 'ClinteController.index')
