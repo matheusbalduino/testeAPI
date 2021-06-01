@@ -4,7 +4,7 @@ import StoreValidator from 'App/Validators/StoreValidator'
 import UpdateValidator from 'App/Validators/UpdateValidator'
 
 export default class ClientesController {
-  public async index ({response, request}: HttpContextContract) {
+  public async index ({response}: HttpContextContract) {
     const cliente = await Cliente.query().orderBy('id','asc')
 
     return response.status(200).send(cliente)
@@ -50,7 +50,7 @@ export default class ClientesController {
     return response.status(200).send(cliente)
   }
 
-  public async destroy ({params, response}: HttpContextContract) {
+  public async destroy ({params}: HttpContextContract) {
     const { id } = await params
 
     const cliente = await Cliente.find(id)

@@ -6,10 +6,9 @@
  */
 
 import Env from '@ioc:Adonis/Core/Env'
-import { OrmConfig } from '@ioc:Adonis/Lucid/Orm'
 import { DatabaseConfig } from '@ioc:Adonis/Lucid/Database'
 
-const databaseConfig: DatabaseConfig & { orm: Partial<OrmConfig> } = {
+const databaseConfig: DatabaseConfig = {
   /*
   |--------------------------------------------------------------------------
   | Connection
@@ -67,8 +66,5 @@ const databaseConfig: DatabaseConfig & { orm: Partial<OrmConfig> } = {
   | - Or define a custom function to compute the primary key for a given model.
   |
   */
-  orm: {
-  },
 }
-
 export default databaseConfig
